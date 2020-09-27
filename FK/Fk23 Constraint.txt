@@ -1,0 +1,28 @@
+DO 
+
+$$
+
+BEGIN
+
+   IF EXISTS (SELECT * 
+             FROM information_schema.table_constraints 
+             WHERE CONSTRAINT_NAME = 'FK_IOCRemediationSettings_Customers'
+             AND TABLE_NAME        = 'IOCRemediationSettings') THEN
+
+    ALTER TABLE dbo."IOCRemediationSettings" DROP CONSTRAINT "FK_IOCRemediationSettings_Customers";
+
+    END IF;
+
+END;
+
+$$;
+
+ALTER TABLE dbo."IOCRemediationSettings"
+
+ADD CONSTRAINT "FK_IOCRemediationSettings_Customers" 
+
+FOREIGN KEY("Customers")
+
+REFERENCES dbo."Customers" ("CustomersId");
+
+ 

@@ -1,0 +1,28 @@
+DO 
+
+$$
+
+BEGIN
+
+   IF EXISTS (SELECT * 
+             FROM information_schema.table_constraints 
+             WHERE CONSTRAINT_NAME = 'FK_IMProvider_IMProviderType'
+             AND TABLE_NAME        = 'IMProvider') THEN
+
+    ALTER TABLE dbo."IMProvider" DROP CONSTRAINT "FK_IMPolicy_IMRuleCategory";
+
+    END IF;
+
+END;
+
+$$;
+
+ALTER TABLE dbo."IMProvider"
+
+ADD CONSTRAINT "FK_IMPolicy_IMRuleCategory" 
+
+FOREIGN KEY("ProviderTypeId")
+
+REFERENCES dbo."IMProvider" ("Provideid");
+
+ 

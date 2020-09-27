@@ -1,0 +1,28 @@
+DO 
+
+$$
+
+BEGIN
+
+   IF EXISTS (SELECT * 
+             FROM information_schema.table_constraints 
+             WHERE CONSTRAINT_NAME = 'IMRuleCategoryConditionDynGroupID'
+             AND TABLE_NAME        = 'IMGroupDynamicTypeID') THEN
+
+    ALTER TABLE dbo."IMGroupDynamicTypeID" DROP CONSTRAINT "FK_IMRuleCategoryConditionDynGroup_IMGroupDynamicType";
+
+    END IF;
+
+END;
+
+$$;
+
+ALTER TABLE dbo."IMGroupDynamicType"
+
+ADD CONSTRAINT "FK_IMRuleCategoryConditionDynGroup" 
+
+FOREIGN KEY("RuleCategoryConditionDynGroupID")
+
+REFERENCES dbo."IMGroupDynamicType" ("IMGroupDynamicTypeID");
+
+ 

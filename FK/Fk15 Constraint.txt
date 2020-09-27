@@ -1,0 +1,28 @@
+DO 
+
+$$
+
+BEGIN
+
+   IF EXISTS (SELECT * 
+             FROM information_schema.table_constraints 
+             WHERE CONSTRAINT_NAME = 'InterfaceUQSettings_ServiceUQOwnerType'
+             AND TABLE_NAME        = 'InterfaceID') THEN
+
+    ALTER TABLE dbo."InterfaceUQSettings" DROP CONSTRAINT "InterfaceUQSettings_ServiceUQOwnerType";
+
+    END IF;
+
+END;
+
+$$;
+
+ALTER TABLE dbo."InterfaceUQSettings"
+
+ADD CONSTRAINT "InterfaceUQSettings_ServiceUQOwnerType" 
+
+FOREIGN KEY("OwnerID")
+
+REFERENCES dbo."ServiceUQOwnerType" ("OwnerID");
+
+ 
