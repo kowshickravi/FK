@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS dbo."PwdPolicyControl"
 (
-    "OwnerId"                   INTEGER         NOT NULL,
+        "OwnerId"                   INTEGER         NOT NULL,
 	"OwnerTypeId"               SMALLINT        NOT NULL,
 	"UseDefault"                CHAR(1)         NOT NULL,
 	"PwdPolicyLevel"            CHAR(1)         NOT NULL,
