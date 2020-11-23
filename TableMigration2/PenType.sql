@@ -1,9 +1,9 @@
 CREATE TABLE IF NOT EXISTS dbo."PenType"
 (
-    "PenTypeId"    INTEGER        NOT NULL,
-	"PenType"      VARCHAR(50)    NOT NULL,
-	"DateCreated"  TIMESTAMP      NOT NULL,
-	"DateAmended"  TIMESTAMP      NOT NULL,
+        "PenTypeId"                 INTEGER         NOT NULL,
+	"PenType"                   VARCHAR(50)     NOT NULL,
+	"DateCreated"               TIMESTAMP       NOT NULL,
+	"DateAmended"               TIMESTAMP       NOT NULL,
 	"WhoAmended_nt_username"    VARCHAR(255)    NOT NULL,
 	"WhoAmended_hostname"       VARCHAR(255)    NOT NULL,
 	"AuditId"                   UUID            NULL,
