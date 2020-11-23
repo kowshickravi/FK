@@ -1,10 +1,10 @@
 CREATE TABLE IF NOT EXISTS dbo."PublicBlacklist"
 (
-    "PublicBlacklistId"         INTEGER    NOT NULL,
-	"Codeid"                    INTEGER    NOT NULL,
-	"[Status]"                  CHAR(1)    NOT NULL,
-	"RetiredDate"               TIMESTAMP  NULL,
-	"ActiveList"                SMALLINT   NOT NULL,
+        "PublicBlacklistId"         INTEGER         NOT NULL,
+	"Codeid"                    INTEGER         NOT NULL,
+	"[Status]"                  CHAR(1)         NOT NULL,
+	"RetiredDate"               TIMESTAMP       NULL,
+	"ActiveList"                SMALLINT        NOT NULL,
 	"HomePageURL"               VARCHAR(100)    NOT NULL,
 	"SpamDNSUserName"           VARCHAR(64)     NULL,
 	"SpamDNSLookupURL"          VARCHAR(256)    NOT NULL,
