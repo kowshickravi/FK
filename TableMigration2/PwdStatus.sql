@@ -1,10 +1,10 @@
 CREATE TABLE IF NOT EXISTS dbo."PwdStatus"
 (
-    "OwnerId"    INTEGER    NOT NULL,
-	"OwnerTypeId"    SMALLINT     NOT NULL,
-	"ForcePwdReset"  VARCHAR(255) NOT NULL,
-	"DateCreated"    TIMESTAMP    NOT NULL,
-	"DateAmended"    TIMESTAMP    NOT NULL,
+        "OwnerId"                   INTEGER         NOT NULL,
+	"OwnerTypeId"               SMALLINT        NOT NULL,
+	"ForcePwdReset"             VARCHAR(255)    NOT NULL,
+	"DateCreated"               TIMESTAMP       NOT NULL,
+	"DateAmended"               TIMESTAMP       NOT NULL,
 	"WhoAmended_NT_Username"    VARCHAR(255)    NOT NULL,
 	"WhoAmended_Hostname"       VARCHAR(255)    NOT NULL,
 	"AuditId"                   UUID            NULL,
