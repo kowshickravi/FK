@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS dbo."PwdPolicy"
 (
-    "PwdPolicyId"                     UUID            NOT NULL,
+        "PwdPolicyId"                     UUID            NOT NULL,
 	"ChangePwdOnFirstLogin"           CHAR(1)         NOT NULL,
 	"MinPwdLength"                    SMALLINT        NOT NULL,
 	"AllowAlpha"                      CHAR(1)         NOT NULL,
