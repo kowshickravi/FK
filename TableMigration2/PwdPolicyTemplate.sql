@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS dbo."PwdPolicyTemplate"
 (
-    "PwdPolicyLevel"                  CHAR(1)     NOT NULL,
+        "PwdPolicyLevel"                  CHAR(1)     NOT NULL,
 	"ChangePwdOnFiestLogin"           CHAR(1)     NOT NULL,
 	"MinPwdLength"                    SMALLINT    NOT NULL,
 	"AllowAlpha"                      CHAR(1)     NOT NULL,
