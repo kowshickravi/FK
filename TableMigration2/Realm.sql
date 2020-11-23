@@ -1,9 +1,9 @@
 CREATE TABLE IF NOT EXISTS dbo."Realm"
 (
-    "CustomerId"    INTEGER         NOT NULL,
-	"RealmName"     VARCHAR(255)    NOT NULL,
-	"DateCreated"   TIMESTAMP       NOT NULL,
-	"DateAmended"   TIMESTAMP       NOT NULL,
+        "CustomerId"                INTEGER         NOT NULL,
+	"RealmName"                 VARCHAR(255)    NOT NULL,
+	"DateCreated"               TIMESTAMP       NOT NULL,
+	"DateAmended"               TIMESTAMP       NOT NULL,
 	"WhoAmended_NT_username"    VARCHAR(255)    NOT NULL,
 	"WhoAmended_hostname"       VARCHAR(255)    NOT NULL,
 	"AuditId"                   UUID            NULL,
