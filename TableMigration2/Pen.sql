@@ -1,11 +1,11 @@
 CREATE TABLE IF NOT EXISTS dbo."Pen"
 (
-      "PenId"                    INTEGER       NOT NULL,
-	   "PenTypeID"               INTEGER       NOT NULL,
-	   "DisplayName"             VARCHAR(50)   NOT NULL,
-	   "PenHostName"             VARCHAR(255)  NOT NULL,
-	   "IPAddress"               VARCHAR(15)   NOT NULL,
-	   "[Description]"           VARCHAR(255)  NOT NULL,
+       "PenId"                   INTEGER       NOT NULL,
+       "PenTypeID"               INTEGER       NOT NULL,
+       "DisplayName"             VARCHAR(50)   NOT NULL,
+       "PenHostName"             VARCHAR(255)  NOT NULL,
+       "IPAddress"               VARCHAR(15)   NOT NULL,
+       "[Description]"           VARCHAR(255)  NOT NULL,
        "DateCreated"             TIMESTAMP     NOT NULL,
        "DateAmended"             TIMESTAMP     NOT NULL,
        "WhoAmended_nt_username"  VARCHAR(255)  NOT NULL,
